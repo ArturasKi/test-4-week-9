@@ -36,12 +36,63 @@ function btnFunction2() {
     document.getElementById("pirmash3").innerHTML = suma;
 }
 
-console.log(africa);
+const li1 = document.createElement('li');
+const li2 = document.createElement('li');
+const li3 = document.createElement('li');
+const li4 = document.createElement('li');
+const li5 = document.createElement('li');
+const li6 = document.createElement('li');
+const li7 = document.createElement('li');
+li1.innerHTML = africa[0];
+li2.innerHTML = africa[1];
+li3.innerHTML = africa[2];
+li4.innerHTML = africa[3];
+li5.innerHTML = africa[4];
+li6.innerHTML = africa[5];
+li7.innerHTML = africa[6];
+document.getElementById('ulID').appendChild(li1);
+document.getElementById('ulID').appendChild(li2);
+document.getElementById('ulID').appendChild(li4);
+document.getElementById('ulID').appendChild(li6);
+document.getElementById('ulID').appendChild(li7);
 
-const li = document.createElement('li');
-li.innerHTML = 'This is tag li text.';
-document.getElementById('ulID').appendChild(li);
-console.log(li);
+
+const btnPlus = document.querySelector('#plus');
+const btnMinus = document.querySelector('#minus');
+
+const inp1 = document.getElementById('input1');
+const inp2 = document.getElementById('input2');
+
+btnPlus.addEventListener('click', () => {
+    console.log('Plus');
+    let sum = Number(inp1.value) + Number(inp2.value);
+    document.getElementById("calc").innerHTML = `Suma = ${sum}`;
+})
+
+btnMinus.addEventListener('click', () => {
+    console.log('Minus');
+    let min = inp1.value - inp2.value;
+    document.getElementById("calc").innerHTML = `Skirtumas = ${min}`;
+})
+
+const li11 = document.createElement('li');
+const li22 = document.createElement('li');
+const li33 = document.createElement('li');
+const li44 = document.createElement('li');
+const li55 = document.createElement('li');
+
+li11.innerHTML = australia[0];
+li22.innerHTML = australia[1];
+li33.innerHTML = australia[2];
+li44.innerHTML = australia[3];
+li55.innerHTML = australia[4];
+
+document.getElementById('ulID2').appendChild(li11);
+document.getElementById('ulID2').appendChild(li22);
+document.getElementById('ulID2').appendChild(li33);
+document.getElementById('ulID2').appendChild(li44);
+document.getElementById('ulID2').appendChild(li55);
+
 
 // 1. Tiesiogiai HTML faile rankiniu būdu sukurkite du tuščius <h2> tagus ir vieną mygtuką. (2 taškai)
 // a. Paspaudus mygtuką kiekvienam tagui sugeneruotkite rand() atskirą skaičių nuo 1 iki 6 ir jį įrašykite į tago vidų naudojant innerText() metodą. (4 taškai)
@@ -52,7 +103,7 @@ console.log(li);
 // b. <h3> tage skaičiuokite ir su innerText() metodu rašykite visų sugeneruotų skaičių sumą. (4 taškai)
 
 // 3. Tiesiogiai HTML faile rankiniu būdu sukurkite <ul> tagą. (2 taškai)
-// a. JS pagalba perskaitykite masyvą africa. (4 taškai)
+// a. JS pagalba perskaitykite masyvą australia. (4 taškai)
 // b. Naudodami createElement() ir kitus reikalingus metodus sukurkite kiekvienam masyvo elementui po <li> tagą su elemento stringu viduje ir juos įrašykite į <ul> tago vidų. (5 taškai)
 // c. Elementus su tuščiais stringais praleiskite ir jiems <li> elementų nekurkite. (4 taškai)
 
